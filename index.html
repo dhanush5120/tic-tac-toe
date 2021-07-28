@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script src="script.js"></script>
+
+	<title>Tic Tac Toe</title>
+</head>
+<body>
+	<center>
+	<h1>TIC TAC TOE</h1>
+	<div>
+		<h3>Instructions</h3>
+		<p>Game starts when START button is clicked</p>
+		<p>Game starts with X's turn</p>
+		<p>Game resets when RESET button is clicked</p>
+	</div>
+	<button class="btn btn-primary btn-lg mb-3" onclick="start()">START</button>
+	<div class="container">
+		<table class="mb-3">
+			<tr>
+				<td><input type="text" id="block1" onclick="block1Check(); winCheck();" readonly disabled></td>
+				<td><input type="text" id="block2" onclick="block2Check(); winCheck();" readonly disabled></td>
+				<td><input type="text" id="block3" onclick="block3Check(); winCheck();" readonly disabled></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="block4" onclick="block4Check(); winCheck();" readonly disabled></td>
+				<td><input type="text" id="block5" onclick="block5Check(); winCheck();" readonly disabled></td>
+				<td><input type="text" id="block6" onclick="block6Check(); winCheck();" readonly disabled></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="block7" onclick="block7Check(); winCheck();" readonly disabled></td>
+				<td><input type="text" id="block8" onclick="block8Check(); winCheck();" readonly disabled></td>
+				<td><input type="text" id="block9" onclick="block9Check(); winCheck();" readonly disabled></td>
+			</tr>
+		</table>
+	</div>
+	<button class="btn btn-primary btn-lg mb-3" onclick="reset()">RESET</button>
+	<p id="result"></p>
+	</center>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

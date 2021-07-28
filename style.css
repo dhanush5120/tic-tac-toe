@@ -1,0 +1,46 @@
+h1{
+	font-size: 80px;
+	color: ;
+}
+
+/*body{
+	background-color: ;
+}*/
+
+h3{
+	font-size: 30px;
+}
+
+p{
+	font-size: 20px;
+	color: blue;
+}
+
+input {
+	width: 150px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+}
+
+
+#result{
+	font-size: 30px;
+	color: black;
+}
+
+.success {
+
+	background-color: lightgreen;
+	color: black;
+}
+
+.danger {
+
+	background-color: orangered;
+	color: black;
+}
