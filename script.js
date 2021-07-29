@@ -1,5 +1,10 @@
 let flag = 1;
 
+let xCount = 0;
+let oCount = 0;
+
+
+
 function start(){
 	let block1 = document.getElementById("block1");
 	let block2 = document.getElementById("block2");
@@ -20,14 +25,31 @@ function start(){
 	block8.disabled = false;
 	block9.disabled = false;
 
+	block1.value = '';
+	block2.value = '';
+	block3.value = '';
+	block4.value = '';
+	block5.value = '';
+	block6.value = '';
+	block7.value = '';
+	block8.value = '';
+	block9.value = '';
 
-	if(flag == 1){
-		document.getElementById("result").innerHTML = "Player X's turn";
-	}
-	else{
-		document.getElementById("result").innerHTML = "Player O's turn";
-	}
+	block1.className = "";
+	block2.className = "";
+	block3.className = "";
+	block4.className = "";
+	block5.className = "";
+	block6.className = "";
+	block7.className = "";
+	block8.className = "";
+	block9.className = "";
 
+
+	document.getElementById("result").innerHTML = "Player X's turn";
+	flag = 1;
+
+	document.getElementById("reset").disabled = false;
 }
 
 function reset(){
@@ -49,6 +71,8 @@ function block1Check(){
 		document.getElementById("block1").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function block2Check(){
@@ -64,6 +88,8 @@ function block2Check(){
 		document.getElementById("block2").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function block3Check(){
@@ -79,6 +105,8 @@ function block3Check(){
 		document.getElementById("block3").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function block4Check(){
@@ -94,6 +122,8 @@ function block4Check(){
 		document.getElementById("block4").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function block5Check(){
@@ -109,6 +139,8 @@ function block5Check(){
 		document.getElementById("block5").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function block6Check(){
@@ -124,6 +156,8 @@ function block6Check(){
 		document.getElementById("block6").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function block7Check(){
@@ -139,6 +173,8 @@ function block7Check(){
 		document.getElementById("block7").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function block8Check(){
@@ -154,6 +190,8 @@ function block8Check(){
 		document.getElementById("block8").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function block9Check(){
@@ -169,6 +207,8 @@ function block9Check(){
 		document.getElementById("block9").disabled = true;
 		flag = 1;
 	}
+
+	document.getElementById("start").disabled = true;
 }
 
 function winCheck(){
@@ -195,6 +235,14 @@ function winCheck(){
 		block7.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		xCount = xCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block1.value == 'O' && block2.value == 'O' && block3.value == 'O'){
@@ -210,6 +258,14 @@ function winCheck(){
 		block7.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		oCount = oCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block1.value == 'X' && block4.value == 'X' && block7.value == 'X'){
@@ -225,6 +281,14 @@ function winCheck(){
 		block6.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		xCount = xCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block1.value == 'O' && block4.value == 'O' && block7.value == 'O'){
@@ -240,6 +304,13 @@ function winCheck(){
 		block6.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		oCount = oCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
 	}
 
 	else if(block1.value == 'X' && block5.value == 'X' && block9.value == 'X'){
@@ -255,6 +326,14 @@ function winCheck(){
 		block6.disabled = true;
 		block7.disabled = true;
 		block8.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		xCount = xCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block1.value == 'O' && block5.value == 'O' && block9.value == 'O'){
@@ -270,6 +349,13 @@ function winCheck(){
 		block6.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		oCount = oCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
 	}
 
 	else if(block2.value == 'X' && block5.value == 'X' && block8.value == 'X'){
@@ -285,6 +371,14 @@ function winCheck(){
 		block6.disabled = true;
 		block7.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		xCount = xCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block2.value == 'O' && block5.value == 'O' && block8.value == 'O'){
@@ -300,6 +394,13 @@ function winCheck(){
 		block6.disabled = true;
 		block7.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		oCount = oCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
 	}
 
 	else if(block3.value == 'X' && block6.value == 'X' && block9.value == 'X'){
@@ -315,6 +416,14 @@ function winCheck(){
 		block5.disabled = true;
 		block7.disabled = true;
 		block8.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		xCount = xCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block3.value == 'O' && block6.value == 'O' && block9.value == 'O'){
@@ -330,6 +439,13 @@ function winCheck(){
 		block5.disabled = true;
 		block7.disabled = true;
 		block8.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		oCount = oCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
 	}
 
 	else if(block4.value == 'X' && block5.value == 'X' && block6.value == 'X'){
@@ -345,6 +461,14 @@ function winCheck(){
 		block7.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		xCount = xCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block4.value == 'O' && block5.value == 'O' && block6.value == 'O'){
@@ -360,6 +484,13 @@ function winCheck(){
 		block7.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		oCount = oCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
 	}
 
 	else if(block7.value == 'X' && block8.value == 'X' && block9.value == 'X'){
@@ -375,6 +506,14 @@ function winCheck(){
 		block4.disabled = true;
 		block5.disabled = true;
 		block6.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		xCount = xCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block7.value == 'O' && block8.value == 'O' && block9.value == 'O'){
@@ -390,6 +529,13 @@ function winCheck(){
 		block4.disabled = true;
 		block5.disabled = true;
 		block6.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		oCount = oCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
 	}
 
 	else if(block3.value == 'X' && block5.value == 'X' && block7.value == 'X'){
@@ -405,6 +551,14 @@ function winCheck(){
 		block6.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		xCount = xCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
+
 	}
 
 	else if(block3.value == 'O' && block5.value == 'O' && block7.value == 'O'){
@@ -420,6 +574,13 @@ function winCheck(){
 		block6.disabled = true;
 		block8.disabled = true;
 		block9.disabled = true;
+
+		document.getElementById("start").disabled = false;
+
+		oCount = oCount + 1;
+
+		document.getElementById("xCounter").innerHTML = xCount;
+		document.getElementById("oCounter").innerHTML = oCount;
 	}
 
 	else if((block1.value == 'X' || block1.value == 'O') && (block2.value == 'X' || block2.value == 'O') &&
@@ -439,18 +600,22 @@ function winCheck(){
 		block8.className = "danger";
 		block9.className = "danger";
 
+		document.getElementById("start").disabled = false;
+
+	
 	}
 
 	else{
+
 		if(flag == 1){
 			document.getElementById("result").innerHTML = "Player X's turn";
 		}
 		else{
 			document.getElementById("result").innerHTML = "Player O's turn";
 		}
+
 	}
-
-
 }
+
 
 

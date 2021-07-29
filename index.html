@@ -19,8 +19,8 @@
 		<p>Game starts with X's turn</p>
 		<p>Game resets when RESET button is clicked</p>
 	</div>
-	<button class="btn btn-primary btn-lg mb-3" onclick="start()">START</button>
-	<div class="container">
+	<button class="btn btn-primary btn-lg mb-3" id="start" onclick="start()">START GAME</button>
+	<div class="container mb-3">
 		<table class="mb-3">
 			<tr>
 				<td><input type="text" id="block1" onclick="block1Check(); winCheck();" readonly disabled></td>
@@ -38,8 +38,13 @@
 				<td><input type="text" id="block9" onclick="block9Check(); winCheck();" readonly disabled></td>
 			</tr>
 		</table>
+			<label id="scorecard">Player X - Player O</label>
+			<div id="score">
+				<output id="xCounter">0</output> <span> - </span>
+				<output id="oCounter">0</output>
+			</div>
 	</div>
-	<button class="btn btn-primary btn-lg mb-3" onclick="reset()">RESET</button>
+	<button class="btn btn-primary btn-lg mb-3" id="reset" onclick="reset()" disabled>RESET GAME</button>
 	<p id="result"></p>
 	</center>
 
